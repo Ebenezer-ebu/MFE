@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   module: {
     // Loaders: this is to process all of our code from ES2016, 17, 19, 20 to regular ES5 code that can be executed in a typical browser
@@ -15,4 +17,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+  ],
 };
